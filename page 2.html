@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>p5.js Project</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    .begin{font-family: Arial, Helvetica, sans-serif; font-weight: bold; display:block; color:black; font-weight: bold; padding-left: 30px; padding-top: 15px; padding-right: 30px; padding-bottom: 15px;
+        position: absolute; left: 47%; top: 90%; background-color: white; border-radius: 40px; text-decoration: none;}
+    
+    </style>
+    
+    <body>
+       <script src="js/three.js"></script>
+       <script src="2OrbitControls.js"></script>
+       <script>
+    
+          let scene, camera, renderer;
+    
+    
+          function init() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(55,window.innerWidth/window.innerHeight,45,30000);
+            camera.position.set(-900,-200,-900);
+    
+            renderer = new THREE.WebGLRenderer({antialias:true});
+            renderer.setSize(window.innerWidth,window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+    
+            let controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.addEventListener('change', renderer);
+            controls.minDistance = 500;
+            controls.maxDistance = 1500;
+           
+            let materialArray = [];
+            let texture_ft = new THREE.TextureLoader().load('text/1front.png');
+            let texture_bk = new THREE.TextureLoader().load('text/1back.png');
+            let texture_up = new THREE.TextureLoader().load('text/1top.png');
+            let texture_dn = new THREE.TextureLoader().load('text/1bot.png');
+            let texture_rt = new THREE.TextureLoader().load('text/1right.png');
+            let texture_lf = new THREE.TextureLoader().load('text/1left.png');
+              
+            materialArray.push(new THREE.MeshBasicMaterial({map:texture_ft }));
+            materialArray.push(new THREE.MeshBasicMaterial({map:texture_bk }));
+            materialArray.push(new THREE.MeshBasicMaterial({map:texture_up }));
+            materialArray.push(new THREE.MeshBasicMaterial({map:texture_dn }));
+            materialArray.push(new THREE.MeshBasicMaterial({map:texture_rt }));
+            materialArray.push(new THREE.MeshBasicMaterial({map:texture_lf }));
+       
+            for (let i = 0; i < 6; i++)
+            materialArray[i].side = THREE.BackSide;
+    
+            let skyboxGeo = new THREE.BoxGeometry( 10000, 10000, 10000);
+            let skybox = new THREE.Mesh(skyboxGeo, materialArray);
+            scene.add(skybox); 
+    
+            animate();
+          }
+          function animate() {
+            renderer.render(scene,camera);
+            requestAnimationFrame(animate);
+          }
+          init();
+        </script>
+    
+    <a href= "page 3.html" class="begin">NEXT</a>
+    
+    </body>
+    </html>
+    
