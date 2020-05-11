@@ -22,3 +22,6 @@ https://www.youtube.com/watch?v=YKzyhcyAijo
 
 Skybox Tutorial
 https://redstapler.co/create-3d-world-with-three-js-and-skybox-technique/
+
+Globe Gif
+https://gfycat.com/hastyunlinedeskimodog
