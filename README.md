@@ -15,16 +15,26 @@ that reflects the knowledge learned by Gabriel Chi in the CCL class.
 
 
 
-Acknowledgements:
+Acknowledgements
 
-Three.js Tutorial
+Three.js Tutorial:
+
 https://www.youtube.com/watch?v=YKzyhcyAijo
 
-Skybox Tutorial
+Skybox Tutorial:
+
 https://redstapler.co/create-3d-world-with-three-js-and-skybox-technique/
 
-Globe Gif
+Globe Gif:
+
 https://gfycat.com/hastyunlinedeskimodog
 
-Skybox Textures
+Skybox Textures:
+
 http://wwwtyro.github.io/space-3d/#animationSpeed=1&fov=80&nebulae=true&pointStars=true&resolution=1024&seed=1jtjuva0pr0g&stars=true&sun=true
+
+Royalty Free Music:
+
+https://www.youtube.com/watch?v=XVbvE0PJyss
+https://www.youtube.com/watch?v=WyGeDKVjloo
+https://www.youtube.com/watch?v=53o3738Pfio
